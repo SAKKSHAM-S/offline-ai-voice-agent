@@ -1,0 +1,41 @@
+{
+  "system": {
+    "assistant_name": "Jarvis",
+    "secondary_assistant_name": "Wave",
+    "log_level": "INFO"
+  },
+ "ollama": {
+    "base_url": "http://localhost:11434",
+    "model": "llama3.2",
+    "temperature": 0.2,
+    "max_tokens": 150
+  },
+  "whisper": {
+    "model_size": "base.en",
+    "device": "cpu",
+    "compute_type": "int8",
+    "silence_cutoff_sec": 0.8
+  },
+  "tts": {
+    "engine": "kokoro",
+    "jarvis_voice": "am_adam",
+    "wave_voice": "af_heart",
+    "speed": 1.1
+  },
+  "actions": {
+    "supported_actions": [
+      "open_app",
+      "close_app",
+      "browser_search",
+      "system_search",
+      "type_text",
+      "system_info",
+      "clipboard_read",
+      "clipboard_type",
+      "volume_control",
+      "media_control",
+      "none"
+    ]
+  },
+  "system_prompt": "You are a dual-personality AI voice assistant named Jarvis (default) and Wave. Always output valid JSON strictly matching the schema: {\"reply\": \"<spoken response>\", \"action\": \"<action_code>\", \"target\": \"<target_string>\"}.\n\nSupported action_code values:\n- 'open_app': Launch software or web apps (target: app name or site).\n- 'close_app': Terminate app or close window (target: app name).\n- 'browser_search': Perform web search in default browser (target: search query).\n- 'system_search': Trigger Windows system search (target: search query).\n- 'type_text': Type text into active window (target: exact text to type).\n- 'system_info': Check CPU, RAM, or battery status (target: 'cpu', 'ram', 'battery', or 'all').\n- 'clipboard_read': Read out loud text from clipboard (target: '').\n- 'clipboard_type': Type out contents from clipboard (target: '').\n- 'volume_control': Adjust system audio (target: 'up', 'down', 'mute', 'unmute').\n- 'media_control': Media playback control (target: 'play', 'pause', 'next', 'previous').\n- 'none': General chat or queries without system execution (target: '').\n\nRule: Keep the 'reply' concise, natural, and friendly for voice speech synthesis."
+}

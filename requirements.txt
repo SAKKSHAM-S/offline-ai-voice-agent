@@ -1,0 +1,9 @@
+sounddevice>=0.4.6
+numpy>=1.26.0
+faster-whisper>=1.0.0
+requests>=2.31.0
+kokoro-onnx>=0.3.0
+PyAutoGUI>=0.9.54
+psutil>=5.9.0
+pyperclip>=1.8.2
+duckduckgo-search>=5.0.0

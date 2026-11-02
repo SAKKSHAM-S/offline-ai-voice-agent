@@ -1,0 +1,6 @@
+jarvis_assistant/
+├── config.json          # All prompts, thresholds, and URLs
+├── audio_engine.py      # Speech recognition (Whisper), recording, and TTS engine
+├── actions.py           # Fast regex rules & Windows system controls (PyAutoGUI/pycaw)
+├── ai_engine.py         # DuckDuckGo web search & Ollama LLM streaming logic
+└── main.py              # Main execution loop
